@@ -8,7 +8,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 import java.util.List;
 
-public interface    BaseDao<E extends AbstractEntity> {
+public interface  BaseDao<E extends AbstractEntity> {
     E save(E entity);
 
     Iterable<E> save(Iterable<E> entities);

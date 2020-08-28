@@ -18,11 +18,6 @@ public class LoginController {
         this.service = service;
     }
 
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public String Test(){
-        return "fkSpring";
-    }
-
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     public List<UserDescriptor> findAll() throws Throwable{
         return service.list();
@@ -36,6 +31,6 @@ public class LoginController {
     @RequestMapping(value = "/save" , method = RequestMethod.POST)
     public String save(@RequestBody UserDescriptor desc) throws Throwable{
         this.service.save(desc);
-        return  "save !";
+        return  "success !";
     }
 }
